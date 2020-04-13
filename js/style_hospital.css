@@ -1,0 +1,43 @@
+    body{
+		margin:0;
+		padding:0;
+    }
+	.container{
+		text-align: center;
+		margin-top: 0.1px;
+	}
+	.btn{
+		border: 1px solid #3498db;
+		background: none;
+		padding: 10px 20px;
+		font-size: 20px;
+		font-family: "montserrat";
+		cursor: pointer;
+		margin: 10px;
+	}
+	.btn1,.btn2,.btn3,.btn4,.btn5,.btn6,.btn7,.btn8,.btn9,.btn10,.btn11,.btn12,.btn13,.btn14,.btn15,.btn16,.btn17,.btn18,.btn19,.btn20,.btn21,.btn22,.btn23,.btn24,.btn25,.btn26,.btn27,.btn28{
+		color:#3498db;
+	}
+	.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover,.btn5:hover,.btn6:hover,.btn7:hover,.btn8:hover,.btn9:hover,.btn10:hover,.btn11:hover,.btn12:hover,.btn13:hover,.btn14:hover,.btn15:hover,.btn16:hover,.btn17:hover,.btn18:hover,.btn19:hover,.btn20:hover,.btn21:hover,.btn22:hover,.btn23:hover,.btn24:hover,.btn25:hover,.btn26:hover,.btn27:hover,.btn28:hover{
+		color: #fff;
+	}
+/*
+	.btn::before{
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height:100%;
+		background: #3498db;
+		z-index: -1;
+		transition: 0.8s;
+
+	}
+	.btn1::before,.btn3::before,.btn5::before,.btn7::before,.btn9::before,.btn11::before,.btn13::before,.btn15::before,.btn17::before,.btn19::before,.btn21::before,.btn23::before,.btn25::before,.btn27::before{
+		top: 0;
+		border-radius: 0 0 50% 50%;
+	}
+	.btn2::before,.btn4::before,.btn6::before,.btn8::before,.btn10::before,.btn12::before,.btn14::before,.btn16::before,.btn18::before,.btn20::before,.btn22::before,.btn24::before,.btn26::before,.btn28::before{
+		bottom: 0;
+		border-radius: 50% 50% 0 0;
+	}*/

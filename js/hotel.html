@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotels as Quarantine Centres</title>
+  <style media ="screen">
+    
+    #custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover {
+  background-color: #00b28f;
+}
+
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+}
+
+  </style>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	
+<div class="wrapper">
+  <div class="contact-form">
+    <div class="input-fields">
+    	  	<h3 style="color: #ffffff">Hotels as Quarantine Centers</h3><br>
+      <input type="text" class="input" placeholder="Name" id="name1">
+      <input type="text" class="input" placeholder="Email Address" id="email1">
+      <input type="text" class="input" placeholder="Phone" id="phone1">
+      <input type="text" class="input" placeholder="Number of rooms" id="room">
+      <input type="text" class="input" placeholder="Location" id="location1">
+      <input type="file" id="real-file" hidden="hidden" />
+      <button type="button" id="custom-button">SELECT PHOTOS OF ROOMS</button>
+      <span id="custom-text">No file chosen, yet.</span>
+      <script type="text/javascript">
+
+         const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+      </script>
+    </div>
+    <div class="msg">
+      <textarea placeholder="Requirements"></textarea>
+      <div class="btn"><button type="submit" id="btn1" name="button" class="btn">send</div>
+    </div>
+  </div>
+</div>  
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCHOXHWvjbVavRSY7IBaiXWz_6O-Y7FDSc",
+    authDomain: "quarantine-centers.firebaseapp.com",
+    databaseURL: "https://quarantine-centers.firebaseio.com",
+    projectId: "quarantine-centers",
+    storageBucket: "quarantine-centers.appspot.com",
+    messagingSenderId: "326889532687",
+    appId: "1:326889532687:web:c5d979d5f3bc6538cda27a",
+    measurementId: "G-9C7PNECQKH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  <script src="hotel.js"></script>
+
+       
+
+</body>
+</html>
